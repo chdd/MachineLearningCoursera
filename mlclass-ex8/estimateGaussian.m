@@ -22,8 +22,14 @@ sigma2 = zeros(n, 1);
 %
 
 
+mu=mean(X);
 
 
+for i=1:n
+    sigma2(i)=((m-1)/m)*std(X).^2;
+    %need m-1/m because Matlab uses 1/m-1 instead of 1/m when computing the
+    %var
+end
 
 
 
